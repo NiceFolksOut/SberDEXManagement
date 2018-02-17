@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		584FA138C9BB7DB508B7CE7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA45C40DF6C4BFEC42622 /* ViewController.swift */; };
+		584FA138C9BB7DB508B7CE7A /* UserWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA45C40DF6C4BFEC42622 /* UserWalletViewController.swift */; };
 		584FA1B126727D8ABD945C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584FA65D150C0408D970CE43 /* Assets.xcassets */; };
 		584FA2DE4572678A5B20B3D3 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA674FA54A6F8D5301F01 /* Wallet.swift */; };
 		584FA382DDCA52231F143BE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584FA3ED08E85F70E4DEB03F /* Main.storyboard */; };
@@ -18,6 +18,25 @@
 		96C55DC120386C2E00F7B8B3 /* SberDEXManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C55DC020386C2E00F7B8B3 /* SberDEXManagementTests.swift */; };
 		A84D0C913F090F4568A17F74 /* Pods_SberDEXManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858A6FA3E65367E981E454 /* Pods_SberDEXManagementTests.framework */; };
 		BACF8CBA8351E31C3631378F /* Pods_SberDEXManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF449D630C44854DBB8DF3F /* Pods_SberDEXManagement.framework */; };
+		FDD375E42038964600D7982A /* StandardSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375E22038964600D7982A /* StandardSectionModel.swift */; };
+		FDD375E52038964600D7982A /* StandardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375E32038964600D7982A /* StandardTableView.swift */; };
+		FDD375E7203896AA00D7982A /* SberCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375E6203896AA00D7982A /* SberCoinCell.swift */; };
+		FDD375E9203896D900D7982A /* AddTrustAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375E8203896D900D7982A /* AddTrustAccountCell.swift */; };
+		FDD375EB203896F400D7982A /* TrustAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375EA203896F400D7982A /* TrustAccountCell.swift */; };
+		FDD375F0203897FF00D7982A /* StandardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375ED203897FE00D7982A /* StandardLabel.swift */; };
+		FDD375F1203897FF00D7982A /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375EE203897FE00D7982A /* Text.swift */; };
+		FDD375F2203897FF00D7982A /* StandardRoundEdgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375EF203897FF00D7982A /* StandardRoundEdgeButton.swift */; };
+		FDD375FE2038994C00D7982A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375F62038994B00D7982A /* UIView.swift */; };
+		FDD375FF2038994C00D7982A /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375F72038994B00D7982A /* UIStackView.swift */; };
+		FDD376002038994C00D7982A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375F82038994B00D7982A /* UIColor.swift */; };
+		FDD376012038994C00D7982A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375F92038994B00D7982A /* UITableView.swift */; };
+		FDD376022038994C00D7982A /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375FA2038994B00D7982A /* UITextField.swift */; };
+		FDD376032038994C00D7982A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375FB2038994B00D7982A /* UIButton.swift */; };
+		FDD376042038994C00D7982A /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375FC2038994B00D7982A /* UIFont.swift */; };
+		FDD376052038994C00D7982A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD375FD2038994B00D7982A /* UILabel.swift */; };
+		FDD376082038A2A700D7982A /* MakeDepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD376072038A2A700D7982A /* MakeDepositViewController.swift */; };
+		FDD3760A2038A45300D7982A /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD376092038A45300D7982A /* WithdrawViewController.swift */; };
+		FDD3760C2038A4D600D7982A /* CeateTrustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3760B2038A4D600D7982A /* CeateTrustViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +57,7 @@
 		52BE613E7AAFC83806205E4C /* Pods-SberDEXManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SberDEXManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SberDEXManagement/Pods-SberDEXManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		584FA1645132E7D9B4B530A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		584FA3ED08E85F70E4DEB03F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		584FA45C40DF6C4BFEC42622 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		584FA45C40DF6C4BFEC42622 /* UserWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWalletViewController.swift; sourceTree = "<group>"; };
 		584FA4EA87738D3B4E6E0175 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		584FA65D150C0408D970CE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		584FA674FA54A6F8D5301F01 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -50,6 +69,25 @@
 		96C55DC020386C2E00F7B8B3 /* SberDEXManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SberDEXManagementTests.swift; sourceTree = "<group>"; };
 		96C55DC220386C2E00F7B8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4858A6FA3E65367E981E454 /* Pods_SberDEXManagementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SberDEXManagementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDD375E22038964600D7982A /* StandardSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardSectionModel.swift; sourceTree = "<group>"; };
+		FDD375E32038964600D7982A /* StandardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTableView.swift; sourceTree = "<group>"; };
+		FDD375E6203896AA00D7982A /* SberCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SberCoinCell.swift; sourceTree = "<group>"; };
+		FDD375E8203896D900D7982A /* AddTrustAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrustAccountCell.swift; sourceTree = "<group>"; };
+		FDD375EA203896F400D7982A /* TrustAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustAccountCell.swift; sourceTree = "<group>"; };
+		FDD375ED203897FE00D7982A /* StandardLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardLabel.swift; sourceTree = "<group>"; };
+		FDD375EE203897FE00D7982A /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		FDD375EF203897FF00D7982A /* StandardRoundEdgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardRoundEdgeButton.swift; sourceTree = "<group>"; };
+		FDD375F62038994B00D7982A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FDD375F72038994B00D7982A /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		FDD375F82038994B00D7982A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FDD375F92038994B00D7982A /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		FDD375FA2038994B00D7982A /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		FDD375FB2038994B00D7982A /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		FDD375FC2038994B00D7982A /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		FDD375FD2038994B00D7982A /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		FDD376072038A2A700D7982A /* MakeDepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDepositViewController.swift; sourceTree = "<group>"; };
+		FDD376092038A45300D7982A /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		FDD3760B2038A4D600D7982A /* CeateTrustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeateTrustViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +142,10 @@
 		584FA82438E34477660D4494 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				584FA45C40DF6C4BFEC42622 /* ViewController.swift */,
+				FDD376062038A1A600D7982A /* User Wallet */,
+				FDD376072038A2A700D7982A /* MakeDepositViewController.swift */,
+				FDD376092038A45300D7982A /* WithdrawViewController.swift */,
+				FDD3760B2038A4D600D7982A /* CeateTrustViewController.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -169,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				96C55DAB20386C2D00F7B8B3 /* AppDelegate.swift */,
+				FDD375F52038994B00D7982A /* Extensions */,
+				FDD375F42038981300D7982A /* Utils */,
 				584FA5E219B21A9D8BB8D33F /* Supporting files */,
 				584FA82438E34477660D4494 /* Story */,
 				584FA2312D8A5C59375FB32A /* Objects */,
@@ -183,6 +226,52 @@
 				96C55DC220386C2E00F7B8B3 /* Info.plist */,
 			);
 			path = SberDEXManagementTests;
+			sourceTree = "<group>";
+		};
+		FDD375EC203896FE00D7982A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FDD375E6203896AA00D7982A /* SberCoinCell.swift */,
+				FDD375E8203896D900D7982A /* AddTrustAccountCell.swift */,
+				FDD375EA203896F400D7982A /* TrustAccountCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDD375F42038981300D7982A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDD375E22038964600D7982A /* StandardSectionModel.swift */,
+				FDD375E32038964600D7982A /* StandardTableView.swift */,
+				FDD375ED203897FE00D7982A /* StandardLabel.swift */,
+				FDD375EF203897FF00D7982A /* StandardRoundEdgeButton.swift */,
+				FDD375EE203897FE00D7982A /* Text.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDD375F52038994B00D7982A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDD375F62038994B00D7982A /* UIView.swift */,
+				FDD375F72038994B00D7982A /* UIStackView.swift */,
+				FDD375F82038994B00D7982A /* UIColor.swift */,
+				FDD375F92038994B00D7982A /* UITableView.swift */,
+				FDD375FA2038994B00D7982A /* UITextField.swift */,
+				FDD375FB2038994B00D7982A /* UIButton.swift */,
+				FDD375FC2038994B00D7982A /* UIFont.swift */,
+				FDD375FD2038994B00D7982A /* UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDD376062038A1A600D7982A /* User Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				584FA45C40DF6C4BFEC42622 /* UserWalletViewController.swift */,
+				FDD375EC203896FE00D7982A /* Cells */,
+			);
+			path = "User Wallet";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,10 +504,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD3760A2038A45300D7982A /* WithdrawViewController.swift in Sources */,
+				FDD375E42038964600D7982A /* StandardSectionModel.swift in Sources */,
+				FDD375E9203896D900D7982A /* AddTrustAccountCell.swift in Sources */,
 				96C55DAC20386C2D00F7B8B3 /* AppDelegate.swift in Sources */,
-				584FA138C9BB7DB508B7CE7A /* ViewController.swift in Sources */,
+				FDD375E7203896AA00D7982A /* SberCoinCell.swift in Sources */,
+				FDD375F2203897FF00D7982A /* StandardRoundEdgeButton.swift in Sources */,
+				FDD376002038994C00D7982A /* UIColor.swift in Sources */,
+				FDD376032038994C00D7982A /* UIButton.swift in Sources */,
+				FDD376082038A2A700D7982A /* MakeDepositViewController.swift in Sources */,
+				FDD375E52038964600D7982A /* StandardTableView.swift in Sources */,
+				FDD376042038994C00D7982A /* UIFont.swift in Sources */,
+				FDD375F0203897FF00D7982A /* StandardLabel.swift in Sources */,
+				FDD3760C2038A4D600D7982A /* CeateTrustViewController.swift in Sources */,
+				FDD375FF2038994C00D7982A /* UIStackView.swift in Sources */,
+				584FA138C9BB7DB508B7CE7A /* UserWalletViewController.swift in Sources */,
+				FDD375EB203896F400D7982A /* TrustAccountCell.swift in Sources */,
+				FDD376022038994C00D7982A /* UITextField.swift in Sources */,
+				FDD376012038994C00D7982A /* UITableView.swift in Sources */,
 				584FAA28270B01E181F2725F /* User.swift in Sources */,
+				FDD376052038994C00D7982A /* UILabel.swift in Sources */,
+				FDD375FE2038994C00D7982A /* UIView.swift in Sources */,
 				584FA2DE4572678A5B20B3D3 /* Wallet.swift in Sources */,
+				FDD375F1203897FF00D7982A /* Text.swift in Sources */,
 				584FA71965BFCF0DC6ABF7EB /* TrustAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SberDEXManagement/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SberDEXManagement/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NFO.SberDEXManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,7 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SberDEXManagement/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SberDEXManagement/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NFO.SberDEXManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";

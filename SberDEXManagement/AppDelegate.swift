@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        let user = SimpleUser()
+        try? UserTrusts.shared.add(from: user.sbercoinWallet() as! SberWallet, with: 200)
+        let rootController = UINavigationController(rootViewController: UserWalletViewController(with: user))
+        rootController.view.backgroundColor = .white
+        rootController.navigationBar.backgroundColor = .clear
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = rootController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

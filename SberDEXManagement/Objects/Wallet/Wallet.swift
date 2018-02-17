@@ -7,6 +7,14 @@ import Foundation
 
 protocol Wallet {
 
-    var valuteAmount: Int
+    var valuteAmount: Float { get }
+    
+}
 
+protocol SberWallet: Wallet {
+    
+    func makeDeposit(amount: Float)
+    
+    func spend(amount: Float) throws
+    
 }
