@@ -37,6 +37,8 @@
 		FDD376082038A2A700D7982A /* MakeDepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD376072038A2A700D7982A /* MakeDepositViewController.swift */; };
 		FDD3760A2038A45300D7982A /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD376092038A45300D7982A /* WithdrawViewController.swift */; };
 		FDD3760C2038A4D600D7982A /* CeateTrustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3760B2038A4D600D7982A /* CeateTrustViewController.swift */; };
+		FDD3760F2038EA2900D7982A /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3760D2038EA2700D7982A /* SegmentControl.swift */; };
+		FDD376102038EA2900D7982A /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3760E2038EA2800D7982A /* HorizontalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		FDD376072038A2A700D7982A /* MakeDepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDepositViewController.swift; sourceTree = "<group>"; };
 		FDD376092038A45300D7982A /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		FDD3760B2038A4D600D7982A /* CeateTrustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeateTrustViewController.swift; sourceTree = "<group>"; };
+		FDD3760D2038EA2700D7982A /* SegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		FDD3760E2038EA2800D7982A /* HorizontalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				96C55DAB20386C2D00F7B8B3 /* AppDelegate.swift */,
+				FDD3760E2038EA2800D7982A /* HorizontalStackView.swift */,
+				FDD3760D2038EA2700D7982A /* SegmentControl.swift */,
 				FDD375F52038994B00D7982A /* Extensions */,
 				FDD375F42038981300D7982A /* Utils */,
 				584FA5E219B21A9D8BB8D33F /* Supporting files */,
@@ -508,6 +514,7 @@
 				FDD375E42038964600D7982A /* StandardSectionModel.swift in Sources */,
 				FDD375E9203896D900D7982A /* AddTrustAccountCell.swift in Sources */,
 				96C55DAC20386C2D00F7B8B3 /* AppDelegate.swift in Sources */,
+				FDD3760F2038EA2900D7982A /* SegmentControl.swift in Sources */,
 				FDD375E7203896AA00D7982A /* SberCoinCell.swift in Sources */,
 				FDD375F2203897FF00D7982A /* StandardRoundEdgeButton.swift in Sources */,
 				FDD376002038994C00D7982A /* UIColor.swift in Sources */,
@@ -526,6 +533,7 @@
 				FDD376052038994C00D7982A /* UILabel.swift in Sources */,
 				FDD375FE2038994C00D7982A /* UIView.swift in Sources */,
 				584FA2DE4572678A5B20B3D3 /* Wallet.swift in Sources */,
+				FDD376102038EA2900D7982A /* HorizontalStackView.swift in Sources */,
 				FDD375F1203897FF00D7982A /* Text.swift in Sources */,
 				584FA71965BFCF0DC6ABF7EB /* TrustAccount.swift in Sources */,
 			);

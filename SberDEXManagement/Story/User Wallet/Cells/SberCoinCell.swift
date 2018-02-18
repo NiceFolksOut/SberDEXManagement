@@ -8,16 +8,19 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SberCoinCell: UITableViewCell {
     
     private var label = StandardLabel(font: .systemFont(ofSize: 18, weight: UIFont.Weight.bold), textColor: .warmGrey, text: "Доступные средства:")
-    private var addButton = StandardRoundEdgeButton()
+    var addButton = StandardRoundEdgeButton()
         .with(font: .systemFont(ofSize: 18, weight: UIFont.Weight.bold))
         .with(title: "Пополнить")
         .with(titleColor: .white)
         .with(backgroundColor: .algaeGreen)
     
+    private var disposeBag = DisposeBag()
     
     private var amountLabel = StandardLabel(font: .systemFont(ofSize: 35, weight: UIFont.Weight.bold), textColor: .black)
     private let srLabel =  StandardLabel(font: .systemFont(ofSize: 20, weight: UIFont.Weight.bold), textColor: .black, text: "SR" )
@@ -58,8 +61,10 @@ class SberCoinCell: UITableViewCell {
       
     }
     
-    func setuped(with sberWallet: Wallet) -> Self {
+    func setuped(with sberWallet: Wallet, subject: PublishSubject<Void>) -> Self {
+        disposeBag = DisposeBag()
         amountLabel.text = "\(sberWallet.valuteAmount)SR"
+        addButton.rx.tap.asObservable().bind(to: subject).disposed(by: disposeBag)
         return self
     }
     

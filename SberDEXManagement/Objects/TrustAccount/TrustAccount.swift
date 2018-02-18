@@ -45,7 +45,6 @@ struct TransactionFrom: Transaction {
     
 }
 
-
 class SimpleTrustAccount: TrustAccount {
     var totalEvaluetion: Float {
         return valute + portfolio.reduce(0, {
@@ -55,11 +54,17 @@ class SimpleTrustAccount: TrustAccount {
     var valute: Float
     var portfolio: [ActivePosition] = [
         ActiveFrom(titile: "AFLT", count: 200, price: 169.2),
-        ActiveFrom(titile: "GMKN", count: 114, price: 9047.62)
+        ActiveFrom(titile: "GMKN", count: 114, price: 907.6)
     ]
     
     
     var history: [Transaction] = [
+        TransactionFrom(date: Date().addingTimeInterval(-1000),
+                        amount: 12,
+                        active: ActiveFrom(titile: "AFLT", count: 200, price: 169.2)),
+        TransactionFrom(date: Date().addingTimeInterval(-1000),
+                        amount: -20,
+                        active: ActiveFrom(titile: "GMKN", count: 114, price: 9047.6)),
         TransactionFrom(date: Date().addingTimeInterval(-1000),
                         amount: 12,
                         active: ActiveFrom(titile: "AFLT", count: 200, price: 169.2)),

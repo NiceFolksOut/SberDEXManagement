@@ -39,9 +39,7 @@ class SbercoinWallet: SberWallet {
 
     private(set) var valuteAmount: Float = 999.0
 
-    class var shared: SbercoinWallet {
-        return SbercoinWallet()
-    }
+    static var shared = SbercoinWallet()
     
     func makeDeposit(amount: Float) {
         valuteAmount += amount
@@ -57,11 +55,10 @@ class SbercoinWallet: SberWallet {
 
 class UserTrusts {
     
-    class var shared: UserTrusts {
-        return UserTrusts()
-    }
+    static var shared: UserTrusts = UserTrusts()
     
-    var trust: TrustAccount = SimpleTrustAccount(with: 200)
+    
+    var trust: TrustAccount?// = SimpleTrustAccount(with: 200)
     
     func add(from wallet: SberWallet, with amount: Float) throws {
         try wallet.spend(amount: amount)
