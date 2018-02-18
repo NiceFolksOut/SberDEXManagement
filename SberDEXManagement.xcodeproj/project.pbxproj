@@ -12,6 +12,7 @@
 		584FA138C9BB7DB508B7CE7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA45C40DF6C4BFEC42622 /* ViewController.swift */; };
 		584FA1ABF36DF6A3737885A8 /* RandomNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FAC896AB2A7CD22F7E0ED /* RandomNonce.swift */; };
 		584FA1B126727D8ABD945C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584FA65D150C0408D970CE43 /* Assets.xcassets */; };
+		584FA1FD78EC21D3296B53EF /* WealthManagementProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA888B4E04BB0F9CBBF81 /* WealthManagementProcedure.swift */; };
 		584FA27348269EC17EA591AF /* BooleanParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA687BEC2ADED7F3E61E5 /* BooleanParameter.swift */; };
 		584FA2DE4572678A5B20B3D3 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA674FA54A6F8D5301F01 /* Wallet.swift */; };
 		584FA31E65638C3B9BC5F41F /* SimpleRLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FAD035B4657DDC2B0D107 /* SimpleRLP.swift */; };
@@ -107,6 +108,7 @@
 		584FA7BFF4911685586100BA /* RLPAppendix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLPAppendix.swift; sourceTree = "<group>"; };
 		584FA7E0373FD2238B33C9A1 /* URLPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLPostRequest.swift; sourceTree = "<group>"; };
 		584FA82B5CA819BBC78748C0 /* PendingBlockChainState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingBlockChainState.swift; sourceTree = "<group>"; };
+		584FA888B4E04BB0F9CBBF81 /* WealthManagementProcedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WealthManagementProcedure.swift; sourceTree = "<group>"; };
 		584FA891EDA9B2FBEF30C75B /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		584FA9520C9193A59F07B592 /* QuantityParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityParameter.swift; sourceTree = "<group>"; };
 		584FA9B829EA0FCFCA8E49B5 /* GetGasPriceProcedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGasPriceProcedure.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				584FA3BC24A380817A3D6B59 /* ChainIDProcedure.swift */,
 				584FA9B829EA0FCFCA8E49B5 /* GetGasPriceProcedure.swift */,
 				584FA6C444E2B904E9F3BF58 /* GetTransactionsCountProcedure.swift */,
+				584FA888B4E04BB0F9CBBF81 /* WealthManagementProcedure.swift */,
 			);
 			path = RemoteProcedure;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				584FA69D401A60EE702922A6 /* ChainIDProcedure.swift in Sources */,
 				584FA6792CA3204DD81622FE /* GetGasPriceProcedure.swift in Sources */,
 				584FAD4C25358AF302CB9DC7 /* GetTransactionsCountProcedure.swift in Sources */,
+				584FA1FD78EC21D3296B53EF /* WealthManagementProcedure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
