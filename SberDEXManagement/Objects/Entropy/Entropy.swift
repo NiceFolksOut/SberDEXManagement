@@ -5,8 +5,8 @@
 
 import Foundation
 
-protocol Wallet {
+protocol Entropy {
 
-    var valuteAmount: Int { get }
+    func toData() throws -> Data
 
 }
