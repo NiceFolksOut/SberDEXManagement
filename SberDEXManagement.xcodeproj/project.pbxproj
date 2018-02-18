@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		584FA07653569975F193CA6A /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FADA98234C4376BC7001B /* URLSession.swift */; };
 		584FA086C6EB6164BEAF570F /* SECP256k1Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FAF36CF77BCFA226DBC10 /* SECP256k1Signature.swift */; };
-		584FA138C9BB7DB508B7CE7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA45C40DF6C4BFEC42622 /* ViewController.swift */; };
-		584FA1ABF36DF6A3737885A8 /* RandomNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FAC896AB2A7CD22F7E0ED /* RandomNonce.swift */; };
 		584FA138C9BB7DB508B7CE7A /* UserWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA45C40DF6C4BFEC42622 /* UserWalletViewController.swift */; };
+		584FA1ABF36DF6A3737885A8 /* RandomNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FAC896AB2A7CD22F7E0ED /* RandomNonce.swift */; };
 		584FA1B126727D8ABD945C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584FA65D150C0408D970CE43 /* Assets.xcassets */; };
 		584FA1FD78EC21D3296B53EF /* WealthManagementProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA888B4E04BB0F9CBBF81 /* WealthManagementProcedure.swift */; };
 		584FA27348269EC17EA591AF /* BooleanParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584FA687BEC2ADED7F3E61E5 /* BooleanParameter.swift */; };
@@ -112,9 +111,8 @@
 		584FA3BC24A380817A3D6B59 /* ChainIDProcedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainIDProcedure.swift; sourceTree = "<group>"; };
 		584FA3DF05A24DEF0414FFF7 /* ObjectParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectParameter.swift; sourceTree = "<group>"; };
 		584FA3ED08E85F70E4DEB03F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		584FA45C40DF6C4BFEC42622 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		584FA45C8486CC692EA82C99 /* EthTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthTransactions.swift; sourceTree = "<group>"; };
 		584FA45C40DF6C4BFEC42622 /* UserWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWalletViewController.swift; sourceTree = "<group>"; };
+		584FA45C8486CC692EA82C99 /* EthTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthTransactions.swift; sourceTree = "<group>"; };
 		584FA4EA87738D3B4E6E0175 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		584FA55D914BB39DFD6C2337 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		584FA62C7C8E46DC899C2DC5 /* KovanInfuraNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KovanInfuraNetwork.swift; sourceTree = "<group>"; };
@@ -933,7 +931,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9HXCUL7KS;
 				INFOPLIST_FILE = "$(SRCROOT)/SberDEXManagement/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NFO.SberDEXManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -948,7 +948,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9HXCUL7KS;
 				INFOPLIST_FILE = "$(SRCROOT)/SberDEXManagement/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NFO.SberDEXManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
