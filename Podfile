@@ -12,6 +12,9 @@ target 'SberDEXManagement' do
 
   pod 'SnapKit', '~> 4.0'
 
+  pod 'CryptoSwift', '~> 0.8'
+  pod 'secp256k1_ios'
+
   target 'SberDEXManagementTests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 4.1'

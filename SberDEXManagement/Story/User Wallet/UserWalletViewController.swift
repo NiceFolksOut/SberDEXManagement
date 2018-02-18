@@ -10,10 +10,12 @@ import UIKit
 import RxDataSources
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 class UserWalletViewController: UIViewController {
     
     enum WalletItems {
+        case contractHash(String)
         case sberCoinAccount(Wallet)
         case portfolioLabel()
         case activePosition(ActivePosition)
@@ -56,22 +58,29 @@ class UserWalletViewController: UIViewController {
                 return tv.dequeueReusableCellOfType(HistoryTitleCell.self, for: ip)
             case let .transaction(transaction):
                 return tv.dequeueReusableCellOfType(TransactionCell.self, for: ip).setuped(with: transaction)
+            case let .contractHash(string):
+                return tv.dequeueReusableCellOfType(ContractCell.self, for: ip).setuped(transactionAddress: string)
             }
         })
 
         userSubject.asObservable()
             .flatMap { user -> Observable<[StandardSectionModel<WalletItems>]> in
-            var items = [WalletItems]()
-            if let account = user.trustAccount() {
-                items =
-                    [WalletItems.portfolioLabel()] +
-                    account.portfolio.map { WalletItems.activePosition($0) } +
-                    [WalletItems.historyLabel()] +
-                    account.history.map { WalletItems.transaction($0) }
-                
-            } else {
-                items = [WalletItems.addTrust()]
-            }
+                var items = [WalletItems]()
+                if let account = user.trustAccount() {
+                    items =
+                        [WalletItems.portfolioLabel()] +
+                            account.portfolio.map { WalletItems.activePosition($0) } +
+                            [WalletItems.historyLabel()] +
+                            account.history.map { WalletItems.transaction($0) }
+                    let wealthManagementWtf = try? WealthManagementProcedure().call()
+                    if let contractHash = wealthManagementWtf?["result"].string {
+                        items = items + [
+                            WalletItems.contractHash(contractHash)
+                        ]
+                    }
+                } else {
+                    items = [WalletItems.addTrust()]
+                }
 
             return Observable.just(
                 [WalletItems.sberCoinAccount(user.sbercoinWallet())] + items
@@ -87,6 +96,12 @@ class UserWalletViewController: UIViewController {
             switch $0 {
             case .addTrust():
                 self.navigationController?.pushViewController(CreateTrustViewController(), animated: true)
+            case let .contractHash(address):
+                UIApplication.shared.open(
+                    URL(
+                        string: "https://kovan.etherscan.io/tx/\(address)"
+                    )!
+                )
             default:
                 return
             }

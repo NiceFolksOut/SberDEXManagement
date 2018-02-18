@@ -165,3 +165,31 @@ class TransactionCell: UITableViewCell {
     }
 }
 
+class ContractCell: UITableViewCell {
+
+    private var titleLabel = StandardLabel(font: .systemFont(ofSize: 20, weight: .bold), textColor: .black)
+
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+
+        contentView.addSubview(titleLabel)
+
+        titleLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(32)
+            $0.bottom.equalToSuperview().offset(-25)
+            $0.leading.equalToSuperview().offset(18)
+        }
+
+        accessoryType = .disclosureIndicator
+
+    }
+
+    func setuped(transactionAddress: String) -> Self {
+        titleLabel.text = "Активный контракт: \(transactionAddress.prefix(8))..."
+        return self
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

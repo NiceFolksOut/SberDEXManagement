@@ -1,35 +1,23 @@
 //
-//  SberDEXManagementTests.swift
-//  SberDEXManagementTests
-//
-//  Created by Timofey on 2/17/18.
-//  Copyright © 2018 NFO. All rights reserved.
+// Created by Timofey on 2/18/18.
+// Copyright (c) 2018 NFO. All rights reserved.
 //
 
-import Nimble
-import Quick
+import Foundation
 import SwiftyJSON
+import secp256k1_ios
 import CryptoSwift
-@testable import SberDEXManagement
 
-class SberDEXManagementTests: XCTestCase {
+final class WealthManagementProcedure: RemoteProcedure {
 
-    private struct E: Entropy {
+    init() {}
 
-        let data: Data
-
-        func toData() throws -> Data {
-            return data
-        }
-    }
-
-    func testExample() {
-
+    func call() throws -> SwiftyJSON.JSON {
         let network = KovanInfuraNetwork(apiKey: "3O4Ywm6wGFgpIn8G10TT")
 
         let nonce = Data(
             integer: UInt(
-                (try! EthTransactions(
+                (try EthTransactions(
                     transactionsCountProcedure: GetTransactionsCountProcedure(
                         network: network,
                         address: SimpleAddress(value: "0x7b8e03Ab8Ef7b29be1b6591118ED6A8716e90e01"),
@@ -83,29 +71,29 @@ class SberDEXManagementTests: XCTestCase {
             privateKey: Data(
                 hexString: "0xb0047b5a622f9e22732ccac454abbb32dff1d1f13de378c877326d85f740cc7e"
             ).map{$0},
-            message: try! SimpleRLP(
+            message: try SimpleRLP(
                 rlps: rlps + replayStubs
             ).toData().map{$0},
             hashFunction: SHA3(variant: .keccak256).calculate
         )
 
-        let value = try! SimpleRLP(
+        let value = try SimpleRLP(
             rlps: rlps + [
                 SimpleRLP(
                     bytes: Data(
-                        integer: UInt(try! 0x77 + signature.recoverID()).bigEndian
+                        integer: UInt(try 0x77 + signature.recoverID()).bigEndian
                     ).droppingLeadingZeroes()
                 ),
                 SimpleRLP(
-                    bytes: try! signature.r()
+                    bytes: try signature.r()
                 ),
                 SimpleRLP(
-                    bytes: try! signature.s()
+                    bytes: try signature.s()
                 )
             ]
         ).toData().toHexString().addingHexPrefix()
 
-        let json = try! JSON(
+        let json = try JSON(
             data: network.call(
                 method: "eth_sendRawTransaction",
                 params: [
@@ -115,132 +103,6 @@ class SberDEXManagementTests: XCTestCase {
                 ]
             )
         )
-        print(json)
+        return json
     }
-
-//    func testExample2() {
-//
-//        let standardRLPs = [
-//            SimpleRLP(
-//                bytes: Data(
-//                    hexString: "0x09"
-//                )
-//            ),
-//            SimpleRLP(
-//                bytes: Data(
-//                    hexString: "0x04a817c800"
-//                )
-//            ),
-//            SimpleRLP(
-//                bytes: Data(
-//                    hexString: "0x5208"
-//                )
-//            ),
-//            SimpleRLP(
-//                bytes: try! SimpleAddress(
-//                    value: "0x3535353535353535353535353535353535353535"
-//                ).toData()
-//            ),
-//            SimpleRLP(
-//                bytes: Data(
-//                    hexString: "0xde0b6b3a7640000"
-//                )
-//            ),
-//            SimpleRLP(
-//                bytes: Data()
-//            )
-//        ]
-//
-//        let stubRLPs = [
-//            SimpleRLP(
-//                bytes: Data(
-//                    hexString: "0x01"
-//                )
-//            ),
-//            SimpleRLP(
-//                bytes: Data()
-//            ),
-//            SimpleRLP(
-//                bytes: Data()
-//            )
-//        ]
-//
-//        let rlpsData = try! SimpleRLP(
-//            rlps: standardRLPs + stubRLPs
-//        ).toData()
-//
-//        expect(
-//            rlpsData.toHexString()
-//        ).to(
-//            equal(
-//                Data(
-//                    hex: "0xec098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a764000080018080"
-//                ).toHexString()
-//            )
-//        )
-//
-//        let signature = SECP256k1Signature(
-//            privateKey: Data(
-//                hexString: "0x4646464646464646464646464646464646464646464646464646464646464646"
-//            ).map{$0},
-//            message: rlpsData.map{$0},
-//            hashFunction: SHA3(variant: .keccak256).calculate,
-//            entropy: E(
-//                data: Data(repeating: 0, count: 31) + Data(
-//                    integer: UInt(9).bigEndian
-//                ).droppingLeadingZeroes()
-//            )
-//        )
-//
-//        expect(
-//            try signature.r().toHexString()
-//        ).to(
-//            equal(
-//                Data(
-//                    hexString: "0x28ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276"
-//                ).toHexString()
-//            )
-//        )
-//        expect(
-//            try signature.s().toHexString()
-//        ).to(
-//            equal(
-//                Data(
-//                    hexString: "0x67cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d83"
-//                ).toHexString()
-//            )
-//        )
-//        expect(
-//            try signature.recoverID()
-//        ).to(
-//            equal(
-//                0
-//            )
-//        )
-//
-//        expect(
-//            try SimpleRLP(
-//                rlps: standardRLPs + [
-//                    SimpleRLP(
-//                        bytes: Data(
-//                            integer: UInt(37).bigEndian
-//                        ).droppingLeadingZeroes()
-//                    ),
-//                    SimpleRLP(
-//                        bytes: signature.r()
-//                    ),
-//                    SimpleRLP(
-//                        bytes: signature.s()
-//                    )
-//                ]
-//            ).toData().toHexString()
-//        ).to(
-//            equal(
-//                Data(
-//                    hexString: "0xf86c098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a76400008025a028ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276a067cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d83"
-//                ).toHexString()
-//            )
-//        )
-//    }
-
 }
