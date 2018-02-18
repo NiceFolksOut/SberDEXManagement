@@ -63,7 +63,7 @@ class SberCoinCell: UITableViewCell {
     
     func setuped(with sberWallet: Wallet, subject: PublishSubject<Void>) -> Self {
         disposeBag = DisposeBag()
-        amountLabel.text = "\(sberWallet.valuteAmount)SR"
+        amountLabel.text = "\(sberWallet.valuteAmount)"
         addButton.rx.tap.asObservable().bind(to: subject).disposed(by: disposeBag)
         return self
     }
